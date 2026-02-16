@@ -1,0 +1,1 @@
+# Zabbix-FortiGate-Template
