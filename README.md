@@ -21,18 +21,17 @@ A new SNMP discovery rule (`fortiap.discovery`) has been added alongside the exi
 - `FortiAP [{#SNMPVALUE}]: Connection State` — monitors online/offline status, updated every minute
 
 **Trigger Prototype:**
-- `FortiAP [{#SNMPVALUE}] is offline` — HIGH severity, fires when state = 2 (offline), auto-recovers when state = 3 (online)
+- `FortiAP [{#SNMPVALUE}] is offline` — HIGH severity, fires when state = 1 (down) or 3 (offline), auto-recovers when state = 2 (online)
 
 **Value Mapping (FortiAP Connection State):**
 | Value | State |
 |-------|-------|
-| 1 | other |
-| 2 | offline |
-| 3 | online |
-| 4 | downloadingImage |
-| 5 | connectedImage |
-| 6 | standby |
-| 7 | preloaded |
+| 1 | down |
+| 2 | online |
+| 3 | offline |
+| 4 | rogue |
+| 5 | initializing |
+| 6 | firmware-update |
 
 ---
 
